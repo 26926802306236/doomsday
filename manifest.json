@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Essentials For Doomsday",
+        "name": "Doomsday",
+        "uuid": "359489ee-5afe-4eb7-a342-3a8c7f80c30b",
+        "version": [0, 0, 1],
+        "min_engine_version": [ 1, 16, 200 ]
+    },
+    "modules": [
+        {
+            "description": "Essentials For Doomsday",
+            "type": "resources",
+            "uuid": "51afaaa9-3773-4443-93d5-1124803e30e9",
+            "version": [0, 0, 1]
+        }
+    ]
+}
