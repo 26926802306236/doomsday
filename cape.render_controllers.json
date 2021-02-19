@@ -1,0 +1,22 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.player.cape.custom": {
+      "rebuild_animation_matrices": true,
+      "arrays": {
+        "textures": {
+          "array.capes": [
+            "texture.startcape"
+          ]
+        }
+      },
+      "geometry": "Geometry.cape",
+      "materials": [ { "*": "Material.cape" } ],
+      "textures": [ "if (#cape_enabled) {array.capes[(query.anim_time * 1)]}" ],
+      "part_visibility": [
+        { "cape": "(query.armor_texture_slot(1) != 5) && (!variable.is_first_person || variable.is_paperdoll) && (!variable.map_face_icon)" }
+      ],
+      "light_color_multiplier": "temp.charge_factor = math.floor(math.mod(query.anim_time*8, 12)); return temp.charge_factor > 6.5 || temp.charge_factor < 1 ? (math.mod(math.pow(query.anim_time+3*20,1.4),1.1)*1.2)+0.85 : 1.1;"
+    }
+  }
+}
